@@ -80,21 +80,36 @@
 ‎    </div>
 ‎</section>
 ‎
-‎<section id="contact" class="contact-section">
-‎    <h2 style="text-align:center">Une demande particulière ?</h2>
-‎    <form>
-‎        <input type="text" placeholder="Votre nom" required>
-‎        <input type="email" placeholder="Votre Email" required>
-‎        <select>
-‎            <option>Type de service souhaité</option>
-‎            <option>Achat de terrain</option>
-‎            <option>Location d'engins / Travaux</option>
-‎            <option>Gestion de mon bien</option>
-‎        </select>
-‎        <textarea placeholder="Décrivez votre projet..." rows="5"></textarea>
-‎        <button type="submit" class="btn" style="border:none; cursor:pointer">Envoyer ma demande</button>
-‎    </form>
-‎</section>
+<section id="contact" class="contact-section">
+    <h2 style="text-align:center; color: var(--primary-blue);">Dites-nous en plus sur votre projet</h2>
+    <p style="text-align:center;">L'équipe de Nexa Immobilier vous répondra sous 24h.</p>
+    
+    <form action="https://formspree.io/f/xgolergr" method="POST">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <input type="text" name="nom" placeholder="Nom complet" required>
+            <input type="tel" name="telephone" placeholder="Numéro de téléphone (WhatsApp)" required>
+        </div>
+        
+        <input type="email" name="email" placeholder="Votre adresse Email" required>
+
+        <label style="font-weight: bold; margin-bottom: 5px;">Quel service vous intéresse ?</label>
+        <select name="service" id="service-select" required>
+            <option value="">-- Choisir une option --</option>
+            <option value="terrain">Achat de Terrain (Lotissements approuvés)</option>
+            <option value="travaux">Travaux Publics (Décapage, Reprofilage, etc.)</option>
+            <option value="location_engins">Location d'Engins Lourds</option>
+            <option value="gestion">Gestion Immobilière</option>
+        </select>
+
+        <input type="text" name="localisation" placeholder="Localisation concernée (ex: Bingerville, Assinie...)">
+        
+        <textarea name="message" placeholder="Décrivez votre besoin en quelques mots (ex: J'ai besoin d'une niveleuse pour 3 jours à Bouaké...)" rows="5"></textarea>
+
+        <button type="submit" class="btn" style="border:none; cursor:pointer; width: 100%; font-size: 1.1rem;">
+            Envoyer ma demande à Nexa Immobilier
+        </button>
+    </form>
+</section>
 ‎
 ‎<footer>
 ‎    <p>&copy; 2026 NEXA IMMOBILIER - Tous droits réservés.</p>
@@ -104,3 +119,4 @@
 ‎</html>
 
 ‎
+
