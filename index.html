@@ -6,49 +6,38 @@
 ‎    <title>Nexa Immobilier | Rêvez Grand, Investissez Malin</title>
 ‎    <style>
 ‎        :root {
-‎            --primary-blue: #1A358B;
-‎            --accent-yellow: #F5D76E;
-‎            --dark-grey: #333;
-‎            --light-bg: #fdfbf5;
-‎        }
+            --primary-blue: #1A358B;
+            --accent-yellow: #E8C477; /* Couleur dorée de ton logo */
+            --dark-grey: #333;
+        }
 ‎
-‎        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; line-height: 1.6; background-color: var(--light-bg); color: var(--dark-grey); }
+‎         body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #fdfbf5; color: var(--dark-grey); }
 ‎        
-‎        /* Header & Logo */
-‎        header { background: var(--accent-yellow); padding: 1rem; text-align: center; border-bottom: 4px solid var(--primary-blue); }
-‎        .logo-placeholder { font-weight: bold; font-size: 2rem; color: var(--primary-blue); text-transform: uppercase; }
+‎         header { background: var(--accent-yellow); padding: 15px; text-align: center; border-bottom: 5px solid var(--primary-blue); }
+        .logo { max-width: 180px; height: auto; border-radius: 5px; }
+        
+        nav { background: var(--primary-blue); display: flex; justify-content: center; padding: 12px; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 0.9rem; text-transform: uppercase; }
+        nav a:hover { color: var(--accent-yellow); }
+
+        .hero { 
+            padding: 80px 20px; 
+            background: linear-gradient(rgba(26, 53, 139, 0.8), rgba(26, 53, 139, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-position: center; color: white; text-align: center; 
+        }
+
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 40px 10%; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-top: 6px solid var(--primary-blue); text-align: center; }
+        .btn { display: inline-block; background: var(--primary-blue); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 15px; font-weight: bold; }
 ‎        
-‎        /* Navigation */
-‎        nav { background: var(--primary-blue); sticky; top: 0; display: flex; justify-content: center; padding: 0.8rem; }
-‎        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 500; transition: 0.3s; }
-‎        nav a:hover { color: var(--accent-yellow); }
-‎
-‎        /* Hero Section */
-‎        .hero { height: 60vh; background: linear-gradient(rgba(26, 53, 139, 0.7), rgba(26, 53, 139, 0.7)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); 
-‎                background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px; }
-‎        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-‎        .hero p { font-size: 1.2rem; font-style: italic; }
-‎
-‎        /* Services Section */
-‎        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 50px 10% ; }
-‎        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid var(--primary-blue); }
-‎        .card h3 { color: var(--primary-blue); }
-‎        .btn { display: inline-block; background: var(--primary-blue); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 15px; }
-‎
-‎        /* Formulaire */
-‎        .contact-section { background: #eee; padding: 50px 10%; }
-‎        form { display: flex; flex-direction: column; max-width: 600px; margin: auto; }
-‎        input, select, textarea { margin-bottom: 15px; padding: 12px; border: 1px solid #ccc; border-radius: 4px; }
-‎        
-‎        footer { background: var(--dark-grey); color: white; text-align: center; padding: 20px; margin-top: 20px; }
-‎    </style>
-‎</head>
-‎<body>
-‎
-‎<header>
-‎    <img src="logo.jpg" alt="Nexa Immobilier" style="max-width:200px;">
-‎    <p style="margin:0; color:var(--primary-blue)">Rêvez grand, investissez malin</p>
-‎</header>
+‎         footer { background: var(--dark-grey); color: white; text-align: center; padding: 30px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpg" alt="Nexa Immobilier Logo" class="logo">
+</header>
 ‎
 ‎<nav>
 ‎    <a href="#terrains">Vente de Terrains</a>
@@ -58,9 +47,9 @@
 ‎</nav>
 ‎
 ‎<section class="hero">
-‎    <h1>Bâtissons Demain Ensemble</h1>
-‎    <p>Expertise en aménagement foncier, location d'engins et gestion de vos biens.</p>
-‎</section>
+    <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Bâtissons Demain Ensemble</h1>
+    <p style="font-size: 1.2rem; font-style: italic;">Rêvez grand, investissez malin</p>
+</section>
 ‎
 ‎<section class="services">
 ‎    <div class="card">
@@ -151,5 +140,6 @@
 ‎</html>
 
 ‎
+
 
 
