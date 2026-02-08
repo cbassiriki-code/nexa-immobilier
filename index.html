@@ -16,19 +16,19 @@
 ‎         header { background: var(--accent-yellow); padding: 15px; text-align: center; border-bottom: 5px solid var(--primary-blue); }
         .logo { max-width: 180px; height: auto; border-radius: 5px; }
         
-        nav { background: var(--primary-blue); display: flex; justify-content: center; padding: 12px; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 0.9rem; text-transform: uppercase; }
-        nav a:hover { color: var(--accent-yellow); }
+            nav { background: var(--primary-blue); display: flex; justify-content: center; padding: 12px; position: sticky; top: 0; z-index: 1000; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 0.9rem; text-transform: uppercase; }
+    nav a:hover { color: var(--accent-yellow); }
 
-        .hero { 
-            padding: 80px 20px; 
-            background: linear-gradient(rgba(26, 53, 139, 0.8), rgba(26, 53, 139, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover; background-position: center; color: white; text-align: center; 
-        }
+    .hero { 
+        padding: 80px 20px; 
+        background: linear-gradient(rgba(26, 53, 139, 0.8), rgba(26, 53, 139, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1350&q=80');
+        background-size: cover; background-position: center; color: white; text-align: center; 
+    }
 
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 40px 10%; }
-        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-top: 6px solid var(--primary-blue); text-align: center; }
-        .btn { display: inline-block; background: var(--primary-blue); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 15px; font-weight: bold; }
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 40px 10%; }
+    .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-top: 6px solid var(--primary-blue); text-align: center; }
+    .btn { display: inline-block; background: var(--primary-blue); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 15px; font-weight: bold; }
 ‎        
 ‎         footer { background: var(--dark-grey); color: white; text-align: center; padding: 30px; margin-top: 40px; }
     </style>
@@ -53,10 +53,11 @@
 ‎
 <section class="services">
     <div class="card">
-        <h3>📍 Vente de Terrains</h3>
-        <p>Terrains avec ACD et extraits topos. Lotissements sécurisés et approuvés.</p>
+        <h3 class="card-title">📍 Vente de Terrains</h3>
+        <p>Terrains avec ACD et extraits topos...</p>
         <a href="#" class="btn">Voir les offres</a>
     </div>
+</section>
     <div class="card">
         <h3>🚜 Travaux & Engins</h3>
         <p>Décapage, ouverture de voies et reprofilage. Location d'engins lourds.</p>
@@ -78,7 +79,7 @@
 </style>
 
 <section class="gallery-section">
-    <h2 style="color: var(--primary-blue);">Nos Réalisations & Offres</h2>
+    <h2 class="section-title">Nos Réalisations & Offres</h2>
     <div class="gallery-grid">
         <div class="gallery-item">
             <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=60" alt="Terrain à vendre">
@@ -110,23 +111,23 @@
         
         <input type="email" name="email" placeholder="Votre adresse Email" required>
 
-        <label style="font-weight: bold; margin-bottom: 5px;">Quel service vous intéresse ?</label>
-        <select name="service" id="service-select" required>
-            <option value="">-- Choisir une option --</option>
-            <option value="terrain">Achat de Terrain (Lotissements en cours d'approbations ou approuvés)</option>
-            <option value="travaux">Travaux Publics (Décapage, Reprofilage, etc.)</option>
-            <option value="location_engins">Location d'Engins Lourds</option>
-            <option value="gestion">Gestion Immobilière</option>
-        </select>
+            <label style="font-weight: bold; margin-bottom: 5px;">Quel service vous intéresse ?</label>
+    <select name="service" id="service-select" required>
+        <option value="">-- Choisir une option --</option>
+        <option value="terrain">Achat de Terrain (Lotissements en cours d'approbations ou approuvés)</option>
+        <option value="travaux">Travaux Publics (Décapage, Reprofilage, etc.)</option>
+        <option value="location_engins">Location d'Engins Lourds</option>
+        <option value="gestion">Gestion Immobilière</option>
+    </select>
 
-        <input type="text" name="localisation" placeholder="Localisation concernée (ex: Bingerville, Assinie...)">
-        
-        <textarea name="message" placeholder="Décrivez votre besoin en quelques mots (ex: J'ai besoin d'une niveleuse pour 3 jours à Bouaké...)" rows="5"></textarea>
+    <input type="text" name="localisation" placeholder="Localisation concernée (ex: Bingerville, Assinie...)">
+    
+    <textarea name="message" placeholder="Décrivez votre besoin en quelques mots (ex: J'ai besoin d'une niveleuse pour 3 jours à Bouaké...)" rows="5"></textarea>
 
-        <button type="submit" class="btn" style="border:none; cursor:pointer; width: 100%; font-size: 1.1rem;">
-            Envoyer ma demande à Nexa Immobilier
-        </button>
-    </form>
+    <button type="submit" class="btn" style="border:none; cursor:pointer; width: 100%; font-size: 1.1rem;">
+        Envoyer ma demande à Nexa Immobilier
+    </button>
+</form>
 </section>
 ‎
 <footer>
@@ -139,6 +140,7 @@
 ‎</html>
 
 ‎
+
 
 
 
