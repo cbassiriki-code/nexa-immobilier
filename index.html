@@ -65,7 +65,7 @@
 ‎<section class="services">
 ‎    <div class="card">
 ‎        <h3>📍 Vente de Terrains</h3>
-‎        <p>Terrains avec ACD, extraits topos. Lotissements approuvés et sécurisés.</p>
+‎        <p>Terrains avec ACD, extraits topos. Lotissements en cours d'approbations, approuvés et sécurisés.</p>
 ‎        <a href="#" class="btn">Voir le catalogue</a>
 ‎    </div>
 ‎    <div class="card">
@@ -75,11 +75,40 @@
 ‎    </div>
 ‎    <div class="card">
 ‎        <h3>🏠 Gestion Immobilière</h3>
-‎        <p>Optimisez vos revenus locatifs en nous confiant la gestion de vos immeubles.</p>
+‎        <p>Optimisez vos revenus locatifs en nous confiant la gestion de vos cités et immeubles.</p>
 ‎        <a href="#" class="btn">En savoir plus</a>
 ‎    </div>
 ‎</section>
-‎
+<style>
+    .gallery-section { padding: 50px 10%; background: #fff; text-align: center; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 30px; }
+    .gallery-item { position: relative; overflow: hidden; border-radius: 10px; height: 200px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .gallery-item:hover img { transform: scale(1.1); }
+    .gallery-item .caption { position: absolute; bottom: 0; background: rgba(26, 53, 139, 0.8); color: white; width: 100%; padding: 10px; font-size: 0.9rem; }
+</style>
+
+<section class="gallery-section">
+    <h2 style="color: var(--primary-blue);">Nos Réalisations & Offres</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=60" alt="Terrain à vendre">
+            <div class="caption">Terrain sécurisé - Bingerville</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1579412691511-209589a19430?auto=format&fit=crop&w=800&q=60" alt="Niveleuse Nexa">
+            <div class="caption">Niveleuse en action - Reprofilage</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1591389067444-4874913dd34c?auto=format&fit=crop&w=800&q=60" alt="Lotissement">
+            <div class="caption">Nouveau Lotissement - Yamoussoukro</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=60" alt="Bulldozer">
+            <div class="caption">Bulldozer D6 - Ouverture de voies</div>
+        </div>
+    </div>
+</section>‎
 <section id="contact" class="contact-section">
     <h2 style="text-align:center; color: var(--primary-blue);">Dites-nous en plus sur votre projet</h2>
     <p style="text-align:center;">L'équipe de Nexa Immobilier vous répondra sous 24h.</p>
@@ -95,7 +124,7 @@
         <label style="font-weight: bold; margin-bottom: 5px;">Quel service vous intéresse ?</label>
         <select name="service" id="service-select" required>
             <option value="">-- Choisir une option --</option>
-            <option value="terrain">Achat de Terrain (Lotissements approuvés)</option>
+            <option value="terrain">Achat de Terrain (Lotissements en cours d'approbations ou approuvés)</option>
             <option value="travaux">Travaux Publics (Décapage, Reprofilage, etc.)</option>
             <option value="location_engins">Location d'Engins Lourds</option>
             <option value="gestion">Gestion Immobilière</option>
@@ -111,12 +140,16 @@
     </form>
 </section>
 ‎
-‎<footer>
-‎    <p>&copy; 2026 NEXA IMMOBILIER - Tous droits réservés.</p>
+<footer>
+    <p>&copy; 2026 NEXA IMMOBILIER - Tous droits réservés.</p>
+    <a href="#" style="color: #ccc; text-decoration: none; font-size: 0.8rem;">Mentions Légales</a> | 
+    <a href="#" style="color: #ccc; text-decoration: none; font-size: 0.8rem;">Politique de Confidentialité</a>
+</footer>
 ‎</footer>
 ‎
 ‎</body>
 ‎</html>
 
 ‎
+
 
