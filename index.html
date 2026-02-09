@@ -69,6 +69,15 @@
 
 <header>
     <img src="logo.jpg" alt="Nexa Immobilier Logo" class="logo">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D5NX3QYNQ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D5NX3QYNQ9');
+</script>
 </header>
 
 <nav>
@@ -89,17 +98,26 @@
   <div class="card">
     <h3 class="card-title">📍 Vente de Terrains</h3>
     <p>Terrains avec ACD et extraits topos. Lotissements sécurisés et approuvés.</p>
-    <a href="#terrains" class="btn">Voir les offres</a>
+    <a href="#terrains" class="btn" 
+   onclick="gtag('event', 'click', { 'event_category':'Bouton', 'event_label':'Voir les offres' });">
+   Voir les offres
+</a>
   </div>
   <div class="card">
     <h3 class="card-title">🚜 Travaux & Engins</h3>
     <p>Décapage, ouverture de voies et reprofilage. Location d'engins lourds.</p>
-    <a href="#engins" class="btn">Demander un devis</a>
+    <a href="#engins" class="btn" 
+   onclick="gtag('event', 'click', { 'event_category':'Bouton', 'event_label':'Demander un devis' });">
+   Demander un devis
+</a>
   </div>
   <div class="card">
     <h3 class="card-title">🏠 Gestion Immobilière</h3>
     <p>Confiez-nous la gestion et l'entretien de vos biens en toute sérénité.</p>
-    <a href="#gestion" class="btn">En savoir plus</a>
+    <a href="#gestion" class="btn" 
+   onclick="gtag('event', 'click', { 'event_category':'Bouton', 'event_label':'En savoir plus' });">
+   En savoir plus
+</a>
   </div>
 </section>
 
@@ -180,7 +198,7 @@
 <section id="gestion" class="services">
   <h2 class="section-title">Gestion Immobilière</h2>
   <p>Confiez-nous la gestion complète de vos biens : entretien, suivi locatif, sécurité.</p>
-  <a href="#contact" class="btn">Contactez-nous</a>
+  <a href="#contact" class="btn">Contactez-nous : (+225) 07 08 33 77 92</a>
 </section>
     ‎
 <footer>
@@ -193,6 +211,7 @@
 ‎</html>
 
 ‎
+
 
 
 
