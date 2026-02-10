@@ -22,3 +22,41 @@
     color: var(--dark-grey);
     margin-bottom: 10px;
 }
+
+footer {
+    background: var(--dark-grey);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--accent-yellow); /* fine bordure dorée */
+}
+
+footer p {
+    margin: 0;
+    font-weight: 500;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    font-size: 0.85rem;
+}
+
+footer a:hover {
+    color: var(--accent-yellow);
+    text-decoration: underline;
+}
+
+.footer-icons {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.footer-icons span {
+    margin: 0 8px;
+    color: var(--accent-yellow);
+}
