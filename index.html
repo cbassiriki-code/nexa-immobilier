@@ -77,6 +77,26 @@
   gtag('js', new Date());
 
   gtag('config', 'G-D5NX3QYNQ9');
+
+  // Ouvrir la modale
+  document.querySelectorAll('.btn-modal').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('modal-demande').style.display = 'block';
+    });
+  });
+
+  // Fermer la modale
+  document.querySelector('.close').addEventListener('click', function() {
+    document.getElementById('modal-demande').style.display = 'none';
+  });
+
+  // Fermer si clic en dehors
+  window.addEventListener('click', function(e) {
+    if (e.target == document.getElementById('modal-demande')) {
+      document.getElementById('modal-demande').style.display = 'none';
+    }
+  });
 </script>
 </header>
 
@@ -193,7 +213,7 @@
     <p>Superficie : 500 m² | Document : Attestation d'Attribution Villageoise et Cession</p>
     <p>Titre de Propriété : Approbation</p>
     <p>Prix : 3 500 000 FCFA</p>
-    <a href="#vente de terrains" class="btn">Demander plus d'infos</a>
+    <a href="#vente de terrains" class="btn btn-modal">Demander plus d'infos</a>
   </div>
   <!-- autres terrains -->
 </section>
@@ -204,7 +224,7 @@
   <div class="card">
     <h3 class="card-title">Bulldozer D7G</h3>
     <p>Idéal pour décapage et terrassement.</p>
-    <a href="#travaux & engins" class="btn">Demander un devis</a>
+    <a href="#travaux & engins" class="btn btn-modal">Demander un devis</a>
   </div>
 </section>
 
@@ -224,11 +244,26 @@
         <span>📞 (+225) 07 08 33 77 92</span>
     </div>
 </footer>
-‎
+
+<!-- Fenêtre modale -->
+<div id="modal-demande" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Envoyer ma demande</h2>
+    <form action="https://formspree.io/f/xgolergr" method="POST">
+      <input type="text" name="nom" placeholder="Nom complet" required>
+      <input type="tel" name="telephone" placeholder="Numéro de téléphone (WhatsApp)" required>
+      <input type="email" name="email" placeholder="Votre adresse Email" required>
+      <textarea name="message" placeholder="Décrivez votre besoin..." rows="4"></textarea>
+      <button type="submit" class="btn" style="width:100%;">Envoyer ma demande</button>
+    </form>
+  </div>
+</div>‎
 ‎</body>
 ‎</html>
 
 ‎
+
 
 
 
