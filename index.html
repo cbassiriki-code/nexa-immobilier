@@ -94,6 +94,24 @@ function ouvrirPopup(e, service) {
     popup.document.getElementById('service').value = service;
   };
 }
+
+function openLightbox(videoUrl) {
+    const lightbox = document.getElementById('lightbox');
+    const videoContainer = document.getElementById('lightbox-video');
+    if(videoUrl.includes('youtube') || videoUrl.includes('vimeo')) {
+      videoContainer.innerHTML = `<iframe src="${videoUrl}" frameborder="0" allowfullscreen></iframe>`;
+    } else {
+      videoContainer.innerHTML = `<video controls autoplay><source src="${videoUrl}" type="video/mp4"></video>`;
+    }
+    lightbox.style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    const videoContainer = document.getElementById('lightbox-video');
+    videoContainer.innerHTML = '';
+    lightbox.style.display = 'none';
+  }
 </script>
 </header>
 
@@ -169,17 +187,17 @@ function ouvrirPopup(e, service) {
   <p>Découvrez nos terrains, nos travaux et nos projets en immersion vidéo.</p>
 
   <div class="video-grid">
-    <div class="video-item" onclick="openLightbox('https://www.youtube.com/embed/VIDEO_ID')">
+    <div class="video-item" onclick="openLightbox('Videos/Visite-nanan.mp4')">
       <img src="Images/Nanan.jpg" alt="Visite lotissement">
-      <div class="caption">Visite d’un lotissement à Yamoussoukro</div>
+      <div class="caption">Visite de NANAN PLATEAU</div>
     </div>
-    <div class="video-item" onclick="openLightbox('videos/travaux-bulldozer.mp4')">
+    <div class="video-item" onclick="openLightbox('Videos/travaux-bulldozer.mp4')">
       <img src="Images/BullD7G.jpg" alt="Travaux Bulldozer">
       <div class="caption">Travaux de décapage avec Bulldozer D7G</div>
     </div>
-    <div class="video-item" onclick="openLightbox('https://player.vimeo.com/video/VIDEO_ID')">
-      <img src="Images/team.jpg" alt="Equipe Nexa">
-      <div class="caption">Présentation de l’équipe Nexa Immobilier</div>
+    <div class="video-item" onclick="openLightbox('Videos/Visite-sahabo.mp4')">
+      <img src="Images/Sahabo.jpg" alt="Visite lotissement">
+      <div class="caption">Visite de SAHABO</div>
     </div>
   </div>
 </section>
@@ -288,6 +306,7 @@ function ouvrirPopup(e, service) {
 ‎</html>
 
 ‎
+
 
 
 
