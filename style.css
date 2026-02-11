@@ -88,9 +88,3 @@ footer a:hover {
   color: var(--primary-blue);
 }
 
-.btn-center {
-  display: block;
-  margin: 20px auto; /* centre horizontalement */
-  text-align: center;
-  width: max-content; /* adapte la largeur au texte */
-}
