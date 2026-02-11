@@ -94,24 +94,6 @@ function ouvrirPopup(e, service) {
     popup.document.getElementById('service').value = service;
   };
 }
-
-function openLightbox(videoUrl) {
-    const lightbox = document.getElementById('lightbox');
-    const videoContainer = document.getElementById('lightbox-video');
-    if(videoUrl.includes('youtube') || videoUrl.includes('vimeo')) {
-      videoContainer.innerHTML = `<iframe src="${videoUrl}" frameborder="0" allowfullscreen></iframe>`;
-    } else {
-      videoContainer.innerHTML = `<video controls autoplay><source src="${videoUrl}" type="video/mp4"></video>`;
-    }
-    lightbox.style.display = 'flex';
-  }
-
-  function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    const videoContainer = document.getElementById('lightbox-video');
-    videoContainer.innerHTML = '';
-    lightbox.style.display = 'none';
-  }
 </script>
 </header>
 
@@ -286,6 +268,7 @@ function openLightbox(videoUrl) {
 ‎</html>
 
 ‎
+
 
 
 
