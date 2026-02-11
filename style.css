@@ -63,7 +63,7 @@ footer a:hover {
 
 /* Fenêtre modale */
 .modal {
-  display: none; /* cachée par défaut */
+  display: none;
   position: fixed;
   z-index: 2000;
   left: 0; top: 0;
@@ -87,3 +87,4 @@ footer a:hover {
   cursor: pointer;
   color: var(--primary-blue);
 }
+
