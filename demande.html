@@ -4,12 +4,66 @@
   <meta charset="UTF-8">
   <title>Envoyer ma demande | Nexa Immobilier</title>
   <style>
-    body { font-family: 'Segoe UI', sans-serif; background:#fdfbf5; padding:20px; }
-    .form-container { max-width:500px; margin:auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
-    h2 { color:#1A358B; text-align:center; }
-    input, textarea, select { width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:5px; }
-    button { background:#1A358B; color:#fff; border:none; padding:12px; width:100%; border-radius:5px; font-weight:bold; cursor:pointer; }
-    button:hover { background:#E8C477; color:#333; }
+    :root {
+      --primary-blue: #1A358B;
+      --accent-yellow: #E8C477;
+      --dark-grey: #333;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdfbf5;
+      margin: 0;
+      padding: 20px;
+      color: var(--dark-grey);
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: var(--primary-blue);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    input[readonly] {
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+
+    button {
+      background: var(--primary-blue);
+      color: #fff;
+      border: none;
+      padding: 14px;
+      width: 100%;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: var(--accent-yellow);
+      color: var(--dark-grey);
+    }
   </style>
 </head>
 <body>
@@ -19,7 +73,10 @@
       <input type="text" name="nom" placeholder="Nom complet" required>
       <input type="tel" name="telephone" placeholder="Numéro de téléphone (WhatsApp)" required>
       <input type="email" name="email" placeholder="Votre adresse Email" required>
-      <input type="text" name="service" id="service" readonly>
+
+      <label style="font-weight:bold;">Service demandé :</label>
+      <input type="text" id="service" name="service" readonly>
+
       <textarea name="message" placeholder="Décrivez votre besoin..." rows="4"></textarea>
       <button type="submit">Envoyer ma demande</button>
     </form>
