@@ -78,27 +78,17 @@
 
   gtag('config', 'G-D5NX3QYNQ9');
 
-  // Ouvrir la modale avec service pré-rempli
-  document.querySelectorAll('.btn-modal').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const service = this.getAttribute('data-service'); // récupère le service
-      document.getElementById('service-field').value = service;
-      document.getElementById('modal-demande').style.display = 'block';
-    });
-  });
-
-  // Fermer la modale
-  document.querySelector('.close').addEventListener('click', function() {
-    document.getElementById('modal-demande').style.display = 'none';
-  });
-
-  // Fermer si clic en dehors
-  window.addEventListener('click', function(e) {
-    if (e.target == document.getElementById('modal-demande')) {
-      document.getElementById('modal-demande').style.display = 'none';
-    }
-  });
+ function ouvrirPopup(e, service) {
+  e.preventDefault();
+  // Ouvre une petite fenêtre popup
+  const popup = window.open('demande.html', 'popupDemande',
+    'width=600,height=600,resizable=no,scrollbars=yes');
+  
+  // Attendre que la popup charge puis injecter le service
+  popup.onload = function() {
+    popup.document.getElementById('service').value = service;
+  };
+}
 </script>
 </header>
 
@@ -215,7 +205,9 @@
     <p>Superficie : 500 m² | Document : Attestation d'Attribution Villageoise et Cession</p>
     <p>Titre de Propriété : Approbation</p>
     <p>Prix : 3 500 000 FCFA</p>
-    <a href="#vente de terrains" class="btn btn-modal" data-service="Achat de Terrain">Demander plus d'infos</a>
+    <a href="demande.html" 
+   onclick="ouvrirPopup(event, 'Achat de Terrain')" 
+   class="btn">Demander plus d'infos</a>
   </div>
   <!-- autres terrains -->
 </section>
@@ -226,14 +218,18 @@
   <div class="card">
     <h3 class="card-title">Bulldozer D7G</h3>
     <p>Idéal pour décapage et terrassement.</p>
-    <a href="#travaux & engins" class="btn btn-modal" data-service="Location d'Engins">Demander un devis</a>
+    <a href="demande.html" 
+   onclick="ouvrirPopup(event, 'Location d\'Engins')" 
+   class="btn">Demander un devis</a>
   </div>
 </section>
 
 <section id="gestion" class="services">
   <h2 class="section-title">Gestion Immobilière</h2>
   <p>Confiez-nous la gestion complète de vos biens : entretien, suivi locatif, sécurité.</p>
-  <a href="#gestion immobilière" class="btn btn-modal" data-service="Gestion Immobilière">Demander plus d'infos</a>
+  <a href="demande.html" 
+   onclick="ouvrirPopup(event, 'Gestion locative')" 
+   class="btn">Demander plus d'infos pour la Gestion de vos Maison et Appartements</a>
 </section>
     ‎
 <footer>
@@ -270,6 +266,7 @@
 ‎</html>
 
 ‎
+
 
 
 
