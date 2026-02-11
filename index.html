@@ -78,10 +78,12 @@
 
   gtag('config', 'G-D5NX3QYNQ9');
 
-  // Ouvrir la modale
+  // Ouvrir la modale avec service pré-rempli
   document.querySelectorAll('.btn-modal').forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
+      const service = this.getAttribute('data-service'); // récupère le service
+      document.getElementById('service-field').value = service;
       document.getElementById('modal-demande').style.display = 'block';
     });
   });
@@ -213,7 +215,7 @@
     <p>Superficie : 500 m² | Document : Attestation d'Attribution Villageoise et Cession</p>
     <p>Titre de Propriété : Approbation</p>
     <p>Prix : 3 500 000 FCFA</p>
-    <a href="#vente de terrains" class="btn btn-modal">Demander plus d'infos</a>
+    <a href="#vente de terrains" class="btn btn-modal" data-service="Achat de Terrain">Demander plus d'infos</a>
   </div>
   <!-- autres terrains -->
 </section>
@@ -224,14 +226,14 @@
   <div class="card">
     <h3 class="card-title">Bulldozer D7G</h3>
     <p>Idéal pour décapage et terrassement.</p>
-    <a href="#travaux & engins" class="btn btn-modal">Demander un devis</a>
+    <a href="#travaux & engins" class="btn btn-modal" data-service="Location d'Engins">Demander un devis</a>
   </div>
 </section>
 
 <section id="gestion" class="services">
   <h2 class="section-title">Gestion Immobilière</h2>
   <p>Confiez-nous la gestion complète de vos biens : entretien, suivi locatif, sécurité.</p>
-  <a href="#gestion immobilière" class="btn">Contactez-nous : (+225) 07 08 33 77 92 / 01 51 28 86 44 / 01 43 88 27 97</a>
+  <a href="#gestion immobilière" class="btn btn-modal" data-service="Gestion Immobilière">Demander plus d'infos</a>
 </section>
     ‎
 <footer>
@@ -241,7 +243,7 @@
     
     <div class="footer-icons">
         <span>📧 cbassiriki@gmail.com</span>
-        <span>📞 (+225) 07 08 33 77 92</span>
+        <span>📞 (+225) 07 08 33 77 92 / 01 51 28 86 44 / 01 43 88 27 97</span>
     </div>
 </footer>
 
@@ -254,6 +256,11 @@
       <input type="text" name="nom" placeholder="Nom complet" required>
       <input type="tel" name="telephone" placeholder="Numéro de téléphone (WhatsApp)" required>
       <input type="email" name="email" placeholder="Votre adresse Email" required>
+
+      <!-- Champ service auto-rempli -->
+      <label style="font-weight:bold;">Service demandé :</label>
+      <input type="text" id="service-field" name="service" readonly style="background:#f0f0f0;">
+
       <textarea name="message" placeholder="Décrivez votre besoin..." rows="4"></textarea>
       <button type="submit" class="btn" style="width:100%;">Envoyer ma demande</button>
     </form>
@@ -263,6 +270,7 @@
 ‎</html>
 
 ‎
+
 
 
 
