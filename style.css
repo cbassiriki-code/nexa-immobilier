@@ -89,7 +89,8 @@ footer a:hover {
 }
 
 .btn {
-  display: inline-block;   /* transforme le lien en bloc */
-  text-align: center;      /* centre le texte dans le bouton */
-  padding: 10px 20px;      /* optionnel, pour donner de l’espace */
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;     /* centre verticalement */
+  padding: 10px 20px;
 }
