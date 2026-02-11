@@ -88,9 +88,3 @@ footer a:hover {
   color: var(--primary-blue);
 }
 
-.btn {
-  display: flex;
-  justify-content: center; /* centre horizontalement */
-  align-items: center;     /* centre verticalement */
-  padding: 10px 20px;
-}
