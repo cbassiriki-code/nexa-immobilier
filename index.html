@@ -164,6 +164,26 @@ function ouvrirPopup(e, service) {
   </div>
 </section>
 
+ <section class="video-section">
+  <h2 class="section-title">Visites & Réalisations en Vidéo</h2>
+  <p>Découvrez nos terrains, nos travaux et nos projets en immersion vidéo.</p>
+
+  <div class="video-grid">
+    <div class="video-item" onclick="openLightbox('https://www.youtube.com/embed/VIDEO_ID')">
+      <img src="Images/Nanan.jpg" alt="Visite lotissement">
+      <div class="caption">Visite d’un lotissement à Yamoussoukro</div>
+    </div>
+    <div class="video-item" onclick="openLightbox('videos/travaux-bulldozer.mp4')">
+      <img src="Images/BullD7G.jpg" alt="Travaux Bulldozer">
+      <div class="caption">Travaux de décapage avec Bulldozer D7G</div>
+    </div>
+    <div class="video-item" onclick="openLightbox('https://player.vimeo.com/video/VIDEO_ID')">
+      <img src="Images/team.jpg" alt="Equipe Nexa">
+      <div class="caption">Présentation de l’équipe Nexa Immobilier</div>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="contact-section">
     <h2 class="section-title">Dites-nous en plus sur votre projet</h2>
     <p style="text-align:center;">L'équipe de Nexa Immobilier vous répondra sous 24h.</p>
@@ -254,12 +274,21 @@ function ouvrirPopup(e, service) {
         <span>📧 cbassiriki@gmail.com</span>
         <span>📞 (+225) 07 08 33 77 92 / 01 51 28 86 44 / 01 43 88 27 97</span>
     </div>
+
+    <!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <div id="lightbox-video"></div>
+  </div>
+</div>
 </footer>
 ‎
 ‎</body>
 ‎</html>
 
 ‎
+
 
 
 
