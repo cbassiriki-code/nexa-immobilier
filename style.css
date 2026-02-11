@@ -87,16 +87,3 @@ footer a:hover {
   cursor: pointer;
   color: var(--primary-blue);
 }
-
-.video-section { padding: 50px 10%; background: #fff; text-align: center; }
-.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-.video-item { position: relative; cursor: pointer; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-.video-item img { width: 100%; height: 180px; object-fit: cover; transition: transform 0.3s; }
-.video-item:hover img { transform: scale(1.05); }
-.caption { background: rgba(26, 53, 139, 0.8); color: white; padding: 10px; font-size: 0.9rem; position: absolute; bottom: 0; width: 100%; }
-
-/* Lightbox */
-.lightbox { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; }
-.lightbox-content { position: relative; width: 80%; max-width: 800px; }
-.lightbox iframe, .lightbox video { width: 100%; height: 450px; border-radius: 10px; }
-.close-btn { position: absolute; top: -40px; right: 0; font-size: 2rem; color: white; cursor: pointer; }
