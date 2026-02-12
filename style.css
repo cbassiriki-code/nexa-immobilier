@@ -145,3 +145,18 @@ footer a:hover {
   color: var(--primary-blue);
   margin-bottom: 10px;
 }
+
+section {
+  padding: 60px 10%;
+}
+
+.hero { background: linear-gradient(rgba(26,53,139,0.8), rgba(26,53,139,0.8)), url('Images/Hero.jpg'); color:#fff; text-align:center; }
+.services { background:#fff; }
+.gallery-section { background:#fdfbf5; }
+.stats { background:#fdfbf5; text-align:center; }
+.why-us { background:#fff; }
+.testimonials { background:#fdfbf5; }
+.faq { background:#fff; }
+.cta { background:linear-gradient(rgba(26,53,139,0.9), rgba(26,53,139,0.9)), url('Images/Terrain.jpg'); color:#fff; text-align:center; }
+.contact-section { background:#fdfbf5; }
+footer { background:#333; color:#fff; text-align:center; padding:30px; }
